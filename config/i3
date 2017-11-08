@@ -9,7 +9,6 @@ for_window [class="^.*"] border pixel 0
 gaps inner 15
 gaps outer -5
 smart_gaps on
-
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -18,13 +17,13 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:Liberation Sans Mono 8
+font pango:SauceCodePro Nerd Font 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -112,8 +111,6 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
-# reload ~/.Xresources
-bindsym $mod+shift+x exec xrdb ~/.Xresources
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
