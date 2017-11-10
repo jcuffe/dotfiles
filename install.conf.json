@@ -6,24 +6,28 @@
     "link": {
       "~/.gitconfig": "home/gitconfig",
       "~/.zshrc": "home/zshrc",
-      "~/.Xresources": "home/Xresources",
       "~/.xinitrc": "home/xinitrc",
       "~/.config/i3/config": {
         "path": "config/i3",
         "create": "true"
       },
       "~/.config/polybar/config": {
-	"path": "config/polybar",
-	"create": "true"
+      	"path": "config/polybar",
+        "create": "true"
       },
       "~/.config/nvim/init.vim": {
         "path": "config/neo.vim",
         "create": "true"
       },
       "~/.config/alacritty/alacritty.yml": {
-	"path": "config/alacritty",
-	"create": "true"
+        "path": "config/alacritty",
+        "create": "true"
       }
     }
+  },
+  {
+    "shell": [
+      ["sh plugins/dein.sh ~/.plugins/neovim", "Installing dein plugin manager"]
+    ]
   }
 ]
