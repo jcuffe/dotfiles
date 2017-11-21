@@ -1,0 +1,9 @@
+# Load antigen for bundling
+source ~/.config/zsh/antigen.zsh
+
+alias e="emacs -nw"
+alias l="exa"
+
+antigen bundle 'martinrotter/powerless'
+
+antigen apply

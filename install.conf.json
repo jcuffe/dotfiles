@@ -1,33 +1,40 @@
 [
   {
-    "clean": ["~"]
-  },
-  { 
-    "link": {
-      "~/.gitconfig": "home/gitconfig",
-      "~/.zshrc": "home/zshrc",
-      "~/.xinitrc": "home/xinitrc",
-      "~/.config/i3/config": {
-        "path": "config/i3",
-        "create": "true"
-      },
-      "~/.config/polybar/config": {
-      	"path": "config/polybar",
-        "create": "true"
-      },
-      "~/.config/nvim/init.vim": {
-        "path": "config/neo.vim",
-        "create": "true"
-      },
-      "~/.config/alacritty/alacritty.yml": {
-        "path": "config/alacritty",
+    "defaults": {
+      "link": {
         "create": "true"
       }
     }
   },
   {
-    "shell": [
-      ["sh plugins/dein.sh ~/.plugins/neovim", "Installing dein plugin manager"]
-    ]
+    "clean": ["~"]
+  },
+  { 
+    "link": {
+      "~/.gitconfig": "config/gitconfig",
+      "~/.compton.conf": "config/compton",
+      "~/.zshrc": "config/zshrc",
+      "~/.xinitrc": "config/xinitrc",
+      "~/.xmodmap": "config/xmodmap",
+      "~/.Xresources": "config/Xresources",
+      "~/.emacs": "config/emacs",
+      "~/.config/i3/config": "config/i3",
+      "~/.config/polybar/config": "config/polybar",
+      "~/.config/rofi/rofi.rasi": "config/rofi",
+      "~/.colors/solarized": "colors/solarized",
+      "~/.images/colors.jpg": "images/colors.jpg",
+      "~/.images/palms.jpg": "images/palms.jpg",
+      "~/.images/mountains.jpg": "images/mountains.jpg",
+      "~/.images/dunes.jpg": "images/dunes.jpg",
+      "~/.images/spiral.jpg": "images/spiral.jpg",
+      "~/.images/islands.jpg": "images/islands.jpg",
+      "~/.images/zigzag.jpg": "images/zigzag.jpg",
+      "~/.images/rose.jpg": "images/rose.jpg",
+      "~/.images/skull.jpg": "images/skull.jpg",
+      "~/.scripts/background-changer.py": "scripts/background-changer.py"
+    }
+  },
+  {
+    "shell": []
   }
 ]

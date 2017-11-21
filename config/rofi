@@ -1,0 +1,36 @@
+* {
+  background-color: #fdf6e3;
+  text-color: #002b36;
+  border-color: #2f60d1;
+  font: "Misc Tamsyn 14";
+  spacing: 0px;
+}
+
+#window {
+  width: 25%;
+  y-offset: -10%;
+  
+}
+
+#inputbar {
+  children: [entry];
+}
+
+#entry {
+  padding: 10px 15px;
+  background-color: #c46cbe;
+  text-color: #fdf6e3;
+}
+
+#listview {
+  lines: 5;
+}
+
+#element {
+  padding: 10px 15px;
+}
+
+#element selected {
+  background-color: #3692d2;
+  text-color: #fdf6e3;
+}

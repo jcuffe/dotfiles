@@ -1,0 +1,10 @@
+URxvt.saveLines: 5000
+URxvt.internalBorder: 23
+URxvt.scrollBar: False
+URxvt.font: xft:Misc Tamsyn, xft:FontAwesome
+URxvt.boldFont:
+
+!Disables the Ctrl+Shift shortcut that enters ISO14755 mode
+URxvt.iso14755: False
+
+#include ".colors/solarized"
