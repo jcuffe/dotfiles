@@ -21,6 +21,7 @@
       "~/.config/i3/config": "config/i3",
       "~/.config/polybar/config": "config/polybar",
       "~/.config/rofi/rofi.rasi": "config/rofi",
+      "~/.config/conky/conky.conf": "config/conky",
       "~/.colors/solarized": "colors/solarized",
       "~/.images/colors.jpg": "images/colors.jpg",
       "~/.images/palms.jpg": "images/palms.jpg",
