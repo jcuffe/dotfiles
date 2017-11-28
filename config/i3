@@ -4,9 +4,10 @@
 exec urxvtd
 
 # Setup desktop environment
-exec_always --no-startup-id killall -q polybar; polybar -r example
-exec_always --no-startup-id ~/.scripts/background-changer.py ~/.images
-exec_always --no-startup-id killall -q compton; compton -bc
+exec_always --no-startup-id killall conky; conky;
+exec_always --no-startup-id killall polybar; polybar -r example
+exec_always --no-startup-id killall python; ~/.scripts/background-changer.py ~/.images
+exec_always --no-startup-id killall compton; compton -bc
 
 # Steam
 assign [class="^Steam"] 2
@@ -23,8 +24,8 @@ for_window [class="^(?!URxvt).*"] border pixel 0
 for_window [class="^URxvt"] border pixel 1
 
 # Gaps
-gaps inner 20
-gaps outer 10
+gaps inner 15
+gaps outer 1
 
 # Load any changes from .Xresources
 exec_always --no-startup-id xrdb ~/.Xresources
@@ -40,7 +41,7 @@ set_from_resource $blue     i3wm.color4
 set_from_resource $magenta  i3wm.color5
 set_from_resource $cyan     i3wm.color6
 set_from_resource $white    i3wm.color7
-set_from_resource $bblac    i3wm.color8
+set_from_resource $bblack   i3wm.color8
 set_from_resource $bred     i3wm.color9
 set_from_resource $bgreen   i3wm.color10
 set_from_resource $byellow  i3wm.color11
