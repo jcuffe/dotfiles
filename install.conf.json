@@ -13,7 +13,6 @@
     "link": {
       "~/.gitconfig": "config/gitconfig",
       "~/.compton.conf": "config/compton",
-      "~/.zshrc": "config/zshrc",
       "~/.xinitrc": "config/xinitrc",
       "~/.xmodmap": "config/xmodmap",
       "~/.Xresources": "config/Xresources",
