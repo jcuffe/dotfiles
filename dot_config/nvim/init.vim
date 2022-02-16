@@ -15,6 +15,10 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+" File finder toggles
+nnoremap <F2> :NERDTreeToggle<CR>
+nnoremap <F3> :NERDTreeFind<CR>
+
 let g:coc_node_path = "/home/jcuffe/.nvm/versions/node/v17.5.0/bin/node"
 
 call plug#begin()
