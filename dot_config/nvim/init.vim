@@ -1,13 +1,12 @@
 
-set nu                " Line numbers
-set signcolumn=number " Code signals in line number column
-
-set mouse=a           " Scroll with mouse wheel
-
-set tabstop=2         " The width of a TAB is set to 4.
-set shiftwidth=2      " Indents will have a width of 4
-set softtabstop=2     " Sets the number of columns for a TAB
-set expandtab         " Expand TABs to spaces
+set nu                    " Line numbers
+set clipboard=unnamedplus " System clipboard
+set signcolumn=number     " Code signals in line number column
+set mouse=a               " Scroll with mouse wheel
+set tabstop=2             " The width of a TAB is set to 4.
+set shiftwidth=2          " Indents will have a width of 4
+set softtabstop=2         " Sets the number of columns for a TAB
+set expandtab             " Expand TABs to spaces
 
 " CoC GoTo Bindings
 nmap <silent> gd <Plug>(coc-definition)
