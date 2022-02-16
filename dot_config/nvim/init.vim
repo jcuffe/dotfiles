@@ -11,6 +11,8 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+let g:node_host_prog = "/home/jcuffe/.nvm/versions/node/v17.5.0/bin/neovim-node-host"
+
 call plug#begin()
   Plug 'preservim/nerdtree'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
