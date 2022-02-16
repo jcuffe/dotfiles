@@ -15,13 +15,25 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" File finder toggles
-nnoremap <F2> :NERDTreeToggle<CR>
-nnoremap <F3> :NERDTreeFind<CR>
 
 let g:coc_node_path = "/home/jcuffe/.nvm/versions/node/v17.5.0/bin/node"
 
 call plug#begin()
   Plug 'preservim/nerdtree'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
 call plug#end()
+
+" Invoke Prettier 
+nmap <silent> <F1> :CocCommand prettier.formatFile<CR> 
+" Rename token
+nmap <silent> <F2> :CocCommand document.renameCurrentWord<CR> 
+" Toggle source tree
+nmap <silent> <F3> :NERDTreeToggle<CR>
+" Find current file in tree
+nmap <silent> <F4> :NERDTreeFind<CR>
+" Fuzzy file Search
+nmap <silent> <F5> :Files<CR> 
+" Fuzzy full text search
+nmap <silent> <F6> :Ag<CR>
