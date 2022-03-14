@@ -1,6 +1,5 @@
-
 set nu                     " Line numbers
-set clipboard+=unnamedplus " System clipboard
+set clipboard=unnamedplus " System clipboard
 set signcolumn=number      " Code signals in line number column
 set mouse=a                " Scroll with mouse wheel
 set tabstop=2              " The width of a TAB is set to 4.
@@ -14,19 +13,8 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+" Pin CoC Node version for performance
 let g:coc_node_path = "/home/jcuffe/.nvm/versions/node/v17.5.0/bin/node"
-let g:clipboard = {
-\   'name': 'system',
-\   'copy': {
-\      '+': ['tmux', 'load-buffer', '-w', '-'],
-\      '*': ['tmux', 'load-buffer', '-w', '-'],
-\    },
-\   'paste': {
-\      '+': ['tmux', 'save-buffer', '-'],
-\      '*': ['tmux', 'save-buffer', '-'],
-\   },
-\   'cache_enabled': 1,
-\ }
 
 call plug#begin()
   Plug 'preservim/nerdtree'
