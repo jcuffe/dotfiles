@@ -2,7 +2,7 @@
 alias cm="chezmoi"
 alias nv="nvim"
 alias sql="node ~/projects/glidian/web-app/scripts/mysql.js"
-alias sqlprod="NODE_ENV=production sql"
+alias sqlprod="mysql -h localhost.aptible.in -P 21777 -u aptible --password=jfGRjHXSrTFl8d5WdRWe7rCyVwIYG_u4 --safe-updates -D db --prompt='PRODUCTION DATABASE> '"
 
 # Set up the prompt
 autoload -Uz promptinit
