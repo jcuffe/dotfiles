@@ -2,7 +2,6 @@
 source "%val{config}/plugins/plug.kak/rc/plug.kak"
 plug "andreyorst/fzf.kak"
 plug "alexherbo2/surround.kak"
-plug "alexherbo2/auto-pairs.kak"
 plug "kak-lsp/kak-lsp" do %{
     cargo install --locked --force --path .
 }
@@ -14,8 +13,11 @@ add-highlighter global/ number-lines
 # Mappings
 #
 
-# Enter Surround Mode
+# Enter surround mode
 map -docstring 'surround mode' global normal q ': surround-mode<ret>'
+
+# Format document
+map -docstring 'format document' global user f ': format-document<ret>'
 
 #
 # Hooks
@@ -25,7 +27,9 @@ map -docstring 'surround mode' global normal q ': surround-mode<ret>'
 hook global NormalKey y %{
     nop %sh{
         encoded=$(printf %s "$kak_main_reg_dquote" | base64 | tr -d '\n')
-        printf "\e]52;c;%s\e\\" "$encoded" >/dev/tty
+
+        # Emit OSC 52 escape sequence with the yanked text as argument
+        printf "\e]52;c;%s\e\\" "$encoded" > /dev/tty
     }
 }
 
@@ -33,7 +37,4 @@ hook global NormalKey y %{
 hook global BufSetOption filetype=javascript %{
     # Format javascript files with Prettier
     set-option buffer formatcmd "prettier --stdin-filepath=%val{buffile}"
-
-    # Format buffer after exiting insert mode
-    hook buffer ModeChange pop:insert:normal format
 }
