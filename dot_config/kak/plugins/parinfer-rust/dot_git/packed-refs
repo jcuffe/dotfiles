@@ -1,0 +1,22 @@
+# pack-refs with: peeled fully-peeled sorted 
+2e6c78ff818d2f5b0160285a38b7f530a5935afc refs/remotes/origin/c
+bcca9557086ce1435c06e02346a896a291fe9c34 refs/remotes/origin/ci-test
+c3b4210e1f8cdc5ab9751509712ff6894b7c1135 refs/remotes/origin/kakoune-display-column
+4d5c62dc6e1d2748cdd27247934567641f8fd145 refs/remotes/origin/kakoune-langs
+9ca432750872803fbbe7596044e2837848c65017 refs/remotes/origin/kakoune-piped-vars
+c51338e004e0e11e33589256c805cbf9ebfc09f1 refs/remotes/origin/master
+a3708f8ab5a2dcd21b5cde5ae9ec8fff9f09ad89 refs/remotes/origin/run-vim-tests-in-ci
+e91c76707237222acb194cc4bd75bb1f7c8908ca refs/tags/v0.1.0
+0c031d7bb41018281e21f5e77b4f7f282b39a886 refs/tags/v0.2.0
+^751aa776804d7bc82519ed5f0c95a2927e127f53
+808d8d330d63b8686848cd636a291c8bae3613f9 refs/tags/v0.3.0
+^0506f56030b72eaf4105725f49e66140791bd6ad
+a7e7bfe7a17bf3ccd3fe388104928a0818b9d58e refs/tags/v0.3.1
+807147a9e08d421c188c3e86f3e98442a2f67900 refs/tags/v0.4.0
+^59a486dceb98c4da2768112df6a65c23d038fa8d
+386d1f14ce7941017f6d59c70764c23f37dd175d refs/tags/v0.4.1
+^c01493338692ced8c641ab4a62d7553f18766898
+a754ddc9c0028982449c613942608f4ecd365e0d refs/tags/v0.4.2
+^f74e65672dcf3f0d85c53ec351ea299998c4c7b6
+c8afd0b31dfd9a97782d748d110fe5024100ac4d refs/tags/v0.4.3
+^7b67f166e8ad12899903a0ea451333c41ed80544

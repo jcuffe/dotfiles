@@ -1,0 +1,5 @@
+cb2f3cf8c4a267d2781471485854fb47322ee3f5		branch 'master' of https://github.com/kak-lsp/kak-lsp
+8ee9b5b8764464f2141280b23e48efcc930129f5	not-for-merge	branch 'changelog' of https://github.com/kak-lsp/kak-lsp
+2add48c583259269ce554a3eda81c56851a4028e	not-for-merge	branch 'pyright' of https://github.com/kak-lsp/kak-lsp
+43f290588ed9e9be6f1c8e6e09ee693889d0636a	not-for-merge	branch 'relocatable-and-shorter-semantic-tokens' of https://github.com/kak-lsp/kak-lsp
+0c10b3c9d072c8e3af0e217f5ee54e31a231dc62	not-for-merge	branch 'shorter-semantic-tokens-syntax' of https://github.com/kak-lsp/kak-lsp

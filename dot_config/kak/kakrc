@@ -1,0 +1,85 @@
+#
+# Configure Plug.kak and plugins
+#
+
+# Idempotent install script
+evaluate-commands %sh{
+    plugins="$kak_config/plugins"
+    mkdir -p "$plugins"
+    [ ! -e "$plugins/plug.kak" ] && \
+        git clone -q https://github.com/andreyorst/plug.kak.git "$plugins/plug.kak"
+    printf "%s\n" "source '$plugins/plug.kak/rc/plug.kak'"
+}
+
+# Register but don't load plugin manager (prevents deletion when cleaning)
+plug "andreyorst/plug.kak" noload
+
+# Register and load my plugins
+plug "andreyorst/fzf.kak"
+plug "alexherbo2/surround.kak"
+plug "jcuffe/auto-pairs.kak" branch "maintain-append-selection"
+plug "kak-lsp/kak-lsp" do %{
+    cargo install --locked --force --path .
+}
+plug "eraserhd/parinfer-rust" do %{
+    cargo install --locked --force --path .
+} config %{
+    hook global WinSetOption filetype=(clojure|lisp|scheme|racket) %{
+        parinfer-enable-window -smart
+    }
+}
+
+#
+# Options and Settings
+#
+
+# Always show number lines
+add-highlighter global/ number-lines
+
+#
+# Mappings
+#
+
+# Enter surround mode
+map -docstring 'surround mode' global normal q ': surround-mode<ret>'
+
+# Format document
+map -docstring 'format document' global user f ': format<ret>'
+
+# Control indent with tab while in insert mode
+map global insert <tab> '<a-;><a-gt>'
+map global insert <s-tab> '<a-;><a-lt>'
+
+#
+# Hooks
+#
+
+# Yank to the system clipboard (`y` only)
+hook global NormalKey y %{
+    nop %sh{
+        encoded=$(printf %s "$kak_main_reg_dquote" | base64 | tr -d '\n')
+
+        # Emit OSC 52 escape sequence with the yanked text as argument
+        printf "\e]52;c;%s\e\\" "$encoded" > /dev/tty
+    }
+}
+
+# Configure IDE services for all languages
+hook global WinSetOption filetype=(rust|python|go|javascript|typescript|c|cpp) %{
+    # Load editorconfig
+    editorconfig-load
+
+    # Enable LSP integration
+    lsp-enable-window
+
+    # Enable auto-hover diagnostics
+    lsp-auto-hover-enable
+
+    # Add User mode shortcuts
+    map global user r ': lsp-rename-prompt<ret>'
+}
+
+# Format with Prettier
+hook global BufSetOption filetype=(typescript|javascript) %{
+    set-option buffer formatcmd "prettier --stdin-filepath=%val{buffile}"
+}
